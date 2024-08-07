@@ -66,12 +66,11 @@ body {
 .media-sosial {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    bottom: 200px;
-    left: 20px;
+    position: sticky;
+    bottom: 100px;
     z-index: 99;
     gap: 10px;
-
+    max-width: 50px;
 
 }
 
@@ -81,14 +80,15 @@ body {
 }
 
 #myBtn {
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #555;
     cursor: pointer;
-    border-radius: 100px;
-    font-size: 30px;
-
+    color: white;
+    width: 40px;          
+    height: 40px;         
+    border-radius: 50%;    
+    border: none;
+    padding: 4px;
+    font-size: 28px;
+    background-color: #333;
 }
 
 #myBtn:hover {
@@ -212,14 +212,77 @@ ul li {
     color: inherit;
 }
 
-
-footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    height: 300px;
+#icon{
     color: white;
-    text-align: center;
+    width: 100px;          
+    height: 100px;         
+    border-radius: 50%;    
+    border: 3px solid #333; 
+    padding: 5px;
+    font-size: 20px;
 }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    margin: 0;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+  }
+  
+  .footer-section .social a {
+    margin-right: 10px;
+    color: #ffcc00;
+  }
+  
+  .footer-section .social a:hover {
+    text-decoration: underline;
+  }
