@@ -212,6 +212,39 @@ ul li {
     color: inherit;
 }
 
+
+.komentar-content img {
+    width: 80px;          
+    height:80px;         
+    border-radius: 50%;    
+    border:none; 
+}
+
+
+.komentar-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    width: 280px;
+    font-size: 14px;
+    background-color: #e1dbd6;
+    border-radius: 10px;    
+    
+}
+
+.komentar-content a  {
+    font-size: 10px;
+    text-decoration: none;
+    color: #111;
+}
+
+.komentar-content span {
+    font-size: 10px;
+    color: inherit;
+    
+}
+
 #icon{
     color: white;
     width: 100px;          
