@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: hidden;
+            /* Membatasi area tampilan */
+        }
+
+        .fixed-item {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="fixed-item" id="fixedItem">Item Fixed</div>
+    </div>
+    <script>
+        const container = document.getElementById('container');
+        const fixedItem = document.getElementById('fixedItem');
+
+        const containerRect = container.getBoundingClientRect();
+        const fixedItemRect = fixedItem.getBoundingClientRect();
+
+        const maxLeft = containerRect.right - fixedItemRect.width;
+        const maxTop = containerRect.bottom - fixedItemRect.height;
+
+        fixedItem.style.left = Math.min(fixedItemRect.left, maxLeft) + 'px';
+        fixedItem.style.top = Math.min(fixedItemRect.top, maxTop) + 'px';
+    </script>
+</body>
+
+</html>
